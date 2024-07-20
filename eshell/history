@@ -1,0 +1,128 @@
+ls -a
+rm .mbsyncpass
+cd ..
+ls -a
+ls 
+gpg --output ~/.authinfo.gpg -symmetric ~/.authinfo
+gpg --output ~/.authinfo.gpg --symmetric ~/.authinfo
+rm .authinfo 
+cd /etc/ssl/
+ls
+cd certs/
+ls
+mbsync --help
+cd ~
+ls
+ls -a
+cd .emacs.d/
+ls
+ls -a
+mbsync --config ~/.emacs.d/.mbsyncrc personalaccount
+mbsync --config ~/.emacs.d/.mbsyncrc personalaccount
+cd ..
+ls
+mbsync --config ~/.emacs.d/.mbsyncrc personalaccount
+mbsync --config ~/.emacs.d/.mbsyncrc personalaccount
+ls
+ls
+cd .emacs.d/
+ls
+ls
+ls -a
+rm .mbsyncpass.gpg 
+ls
+ls -a
+gpg --output .mbsyncpass.gpg --symmetric .mbsyncpass
+rm .mbsyncpass 
+mbsync --config ~/.emacs.d/.mbsyncrc personalaccount
+ls
+cd ..
+offlineimap
+offlineimap
+ls
+ls
+cd .emacs.d/
+ls
+mbsync --config ~/.emacs.d/.mbsyncrc personalaccount
+ls
+ls -a
+rm .mbsyncpass.gpg 
+gpg --output .mbsyncpass.gpg --symmetric .mbsyncpass
+lsrm .mbsyncpass 
+rm .mbsyncpass 
+mbsync --config ~/.emacs.d/.mbsyncrc personalaccount
+mbsync --config ~/.emacs.d/.mbsyncrc personalaccount
+ls
+cd ..
+ls
+cd Maildir/
+ls
+cd ..
+ls
+cd email/
+ls
+cd mbsyncmail/
+ls
+cd GMail
+cd \[Gmail\]/
+ls
+cd All\ Mail/
+ls
+cd ..
+ls
+cd All\ Mail/
+ls
+cd cur/
+ls
+cd ..
+;s
+ls
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd mbsyncmail/
+cd INBOX/
+ls
+cd cur
+ls
+cd ..
+cd ..
+cd ..
+mu init --maildir=~/email/mbsyncmail/
+mu index
+ls
+cd..
+ls
+cd ..
+ls
+cd Maildir/
+ls
+cd ..
+rm Maildir/
+rm -rf Maildir/
+ls
+cd .emacs.d/ls
+cd .emacs.d/
+ls
+rm mail.el mail.el\~ 
+ls
+ls
+cd ..
+ls
+cd email/
+ls
+cd mbsyncmail/
+ls
+cd ls
+ls
+cd ..
+cd email/
+ls
+cd mbsyncmail/
+ls
+cd \[Gmail\]/
+ls

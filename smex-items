@@ -1,0 +1,33 @@
+
+;; ----- smex-history -----
+(
+ delete-char
+ racket-stop-back-end
+ mu4e
+ pyvenv-activate
+ make-directory
+ eshell
+ delete-file
+)
+
+;; ----- smex-data -----
+(
+ (eshell . 16)
+ (package-install . 3)
+ (package-install-from-buffer . 1)
+ (write-file . 4)
+ (python-indent-shift-left . 1)
+ (display-line-numbers-mode . 1)
+ (python-indent-shift-right . 4)
+ (insert-parentheses . 10)
+ (racket-stop-back-end . 2)
+ (dired-create-directory . 2)
+ (spook . 12)
+ (delete-file . 1)
+ (make-directory . 2)
+ (mu4e . 19)
+ (pyvenv-create . 3)
+ (pyvenv-menu . 1)
+ (pyvenv-activate . 2)
+ (delete-char . 2)
+)
