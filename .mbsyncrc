@@ -4,7 +4,7 @@ User carsonbring@gmail.com
 PassCmd "gpg -q --for-your-eyes-only --no-tty -d ~/.emacs.d/.mbsyncpass.gpg"
 Port 993
 SSLType IMAPS
-AuthMechs *
+AuthMechs PLAIN
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore personalaccount-remote
@@ -21,6 +21,6 @@ Near :personalaccount-local:
 Patterns *
 Create Near
 Sync All
-Expunge None
+Expunge Both
 SyncState *
 

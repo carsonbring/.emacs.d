@@ -1,4 +1,6 @@
 ;; -*- lexical-binding: t -*-
+(require 'epa)
+(epa-file-enable)
 
 ;;; Custom Keymaps
 (global-set-key (kbd "C-c i") 'insert-parentheses)
@@ -7,7 +9,7 @@
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 ;; font size
 ;; value is in 1/10pt
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 120)
 
 (load (expand-file-name "mu4e.el" user-emacs-directory))
 
@@ -23,12 +25,20 @@
 (setq package-archives
 '(("GNU ELPA" . "https://elpa.gnu.org/packages/")
 ("MELPA Stable" . "https://stable.melpa.org/packages/")
-("MELPA" . "https://melpa.org/packages/"))
+("MELPA" . "https://melpa.org/packages/")
+("GNU DEVEL" . "https://elpa.gnu.org/devel/"))
 package-archive-priorities
 '(("MELPA Stable" . 10)
-("MELPA" . 5)
+  ("MELPA" . 5)
+  ("GNU DEVEL" . 3)
 ("GNU ELPA" . 2)))
 (package-initialize)
+	
+;Setting font
+(set-face-attribute 'default nil :font "0xProto Nerd Font Mono-12" )
+
+;Killing toolbar
+(tool-bar-mode -1)
 
 ;; custom startup screen into sicp due to me doing my practice
 (setq inhibit-startup-screen t)
@@ -101,10 +111,15 @@ package-archive-priorities
 (use-package rainbow-delimiters
              :ensure t
              :config (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+
 ;; Make buffer names unique
 ;; buffernames that are foo<1>, foo<2> are hard to read. This makes them foo|dir  foo|otherdir
 (use-package uniquify
-             :config (setq uniquify-buffer-name-style 'post-forward))
+  :config (setq uniquify-buffer-name-style 'post-forward))
+
+; Magit
+(use-package magit
+  :ensure t)
 
 ;; Highlight matching parenthesis
 (show-paren-mode 1)

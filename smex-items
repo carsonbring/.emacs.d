@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
- delete-char
- racket-stop-back-end
+ package-install
+ package-refresh-contents
+ paredit-mode
  mu4e
- pyvenv-activate
- make-directory
  eshell
- delete-file
+ mu4e-update-index
+ delete-char
 )
 
 ;; ----- smex-data -----
 (
- (eshell . 16)
- (package-install . 3)
+ (eshell . 17)
+ (package-install . 6)
  (package-install-from-buffer . 1)
  (write-file . 4)
  (python-indent-shift-left . 1)
@@ -25,9 +25,12 @@
  (spook . 12)
  (delete-file . 1)
  (make-directory . 2)
- (mu4e . 19)
+ (mu4e . 32)
  (pyvenv-create . 3)
  (pyvenv-menu . 1)
  (pyvenv-activate . 2)
  (delete-char . 2)
+ (mu4e-update-index . 3)
+ (paredit-mode . 1)
+ (package-refresh-contents . 1)
 )

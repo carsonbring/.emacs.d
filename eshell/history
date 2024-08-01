@@ -1,16 +1,3 @@
-ls -a
-rm .mbsyncpass
-cd ..
-ls -a
-ls 
-gpg --output ~/.authinfo.gpg -symmetric ~/.authinfo
-gpg --output ~/.authinfo.gpg --symmetric ~/.authinfo
-rm .authinfo 
-cd /etc/ssl/
-ls
-cd certs/
-ls
-mbsync --help
 cd ~
 ls
 ls -a
@@ -126,3 +113,16 @@ cd mbsyncmail/
 ls
 cd \[Gmail\]/
 ls
+cd ..
+ls
+cd Downloads/
+ls
+unzip 0xProto.zip 
+ls
+rm 0xProto.zip 
+mv 0xProtoNerdFont* ~/.local/share/fonts/
+fc-cache
+fc-query -f 0xProto
+fc-query
+fc-query -i
+fc-query -f '%{family[0]}\n'

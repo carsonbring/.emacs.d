@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/Carson/.config/" . "polybar/")
+ ("/home/Carson/" . ".emacs.d/")
  ("/home/carson/projects/sicp/" . "chapter2/")
  ("/" . "home/")
  ("/home/carson/projects/consolidated_backend/" . "app/")
@@ -13,6 +15,10 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/Carson/.emacs.d/"
+ "/home/Carson/.config/polybar/"
+ "/home/Carson/.config/i3status/"
+ "/home/Carson/.config/i3/"
  "/home/carson/projects/sicp/chapter3/"
  "/home/carson/projects/sicp/chapter2/"
  "/home/carson/projects/pdf_analyzer/"
@@ -26,20 +32,38 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init.el"
+ "config.ini"
+ "config"
+ "mu4e.el"
+ ".mbsyncrc"
  "exercise_3.27.rkt"
  "excercise_2.66.rkt"
  "exercise_3.26.rkt"
  "exercise_3.25.rkt"
  "exercise_3.24.rkt"
- "exercise_3.23.rkt"
- "llm.py"
- "vector.py"
- "agents.py"
- "main.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/Carson/.emacs.d/" (26283 57291 311769 778000) "../" "./" "eln-cache/" "elpa/" ".gitignore" "init.el" ".git/" "spinner.el/" "auto-save-list/" "tutorial/" "smex-items" ".lsp-session-v1" ".mbsyncpass.gpg" ".mbsyncrc" "ido.last" "mu4e.el" "ido.last~" "eshell/")
+
+ ("/home/Carson/" (26283 55393 851849 161000) ".kaggle/" "C++/" "../" "./" ".cargo/" ".pki/" ".java/" "mail/" ".Xauthority" "games/" "bash/" ".bash_logout" ".xscreensaver" ".azuredatastudio/" "custom_site_prefs/" "VirtualBox VMs/" ".zshrc" ".Xresources" ".config/" "funny/" "Downloads/" ".xsession-errors.old" "stevie" ".vscode/" ".bashrc" ".gradle/" ".themes/" ".ghc/" ".bash_history" ".netbeans/" ".bash_profile" "frameworks/" ".dmrc" ".gitconfig" "ai/" ".emacs.d/" ".mozilla/" ".idlerc/" "clubs/" "opt/" "git/" ".vnc/" "backupemacs/" "email/" ".local/" ".gnupg/" ".xsession-errors" ".eclipse/" "languages/" ".icons/" ".cache/" ".xession" "linknusNotes/" "records/" ".swt/" ".python_history" ".npm/" ".fehbg" "go/" "structs_and_algos/" "bytele/" ".xinitrc" ".minecraft/" "packageHelpers/" "projects/" ".ssh/" ".authinfo.gpg" "classes/" ".geiser_history.mit" ".emacs~" ".gtkrc-2.0" "vidya/" ".vimrc" ".geiser_history.racket" ".viminfo")
+
+ ("/home/Carson/projects/sicp/" (26258 29370 713379 387000) "hello" "../" ".gitattributes" "./" "chapter2/" "test" "sum" ".gitignore" ".git/" "chapter3/" "smallest-divisor" "product" "chapter1/")
+
+ ("/home/Carson/.config/polybar/" (26279 65176 30840 190000) "../" "config.ini~" "./" "#config.ini#" "polybar.sh" ".#config.ini" "config.ini")
+
+ ("/home/Carson/.config/i3/" (26279 64864 627519 803000) "../" "./" "config" "config~" "workspace.json")
+
+ ("/home/Carson/.config/i3status/" (25837 23625 758283 467000) "../" "./" "config")
+
+ ("/home/Carson/.config/" (26245 44374 839885 881000) "emaildefaults" "polybar/" "kiorc" "VirtualBox/" "KDE/" "defaultcalendarrc" "i3blocks/" "../" "./" "libreoffice/" "cef_user_data/" "emailidentities" "akonadi_akonotes_resource_0rc" "dconf/" "evolution/" "gtk-3.0/" "azuredatastudio/" "kde.org/" "BraveSoftware/" "@bfemulator/" "akonadi_ical_resource_0rc" "config" "launch.sh" "akonadi_maildir_resource_0rc" "session/" "akonadi/" "nitrogen/" "gtk-2.0/" "akonadi-firstrunrc" "Code/" "eventviewsrc" "discord/" "akonadi_contacts_resource_0rc" "i3status/" "pulse/" "jgit/" "dolphinrc" "brightness_controller/" "libaccounts-glib/" "ngrok/" "specialmailcollectionsrc" "GIMP/" "QtProject.conf" "neofetch/" "i3/" "kwalletrc" "QtProject/" "kalendaracrc" "diode/" "mimeapps.list" "racket/" "Electron/" "vlc/" "fontforge/" "bunkus.org/" "i3-layout-manager/" "nvim/" "akonadi_indexing_agentrc" "korganizerrc" "kitty/" "clangd/")
+
+ ("/home/Carson/Downloads/" (26279 63185 504256 193000) "mu-1.12.5/" "../" "./" "IMG_6617.jpeg" ".~lock.Assignment_1_489_689_F23.docx#" ".~lock.Slides_1_Introduction(1).pptx#" ".~lock.Assignment1_2023 Lottery(2).docx#" "emacs-lucid/" "README.md" "LICENSE" "BotFramework-Emulator-4.14.1-linux-x86_64.AppImage" "mu-1.12.5.tar.xz")
+
+ ("/home/Carson/projects/" (26233 40147 347948 538000) "bot_sdk_sf/" "../" "./" "GPT_action_sf/" "sicp/" "consolidated_backend/")
+
  ("/home/carson/projects/sicp/chapter3/" (26267 6161 399729 640000) "exercise_3.5.rkt~" "exercise_3.21.rkt~" "exercise_3.20.rkt" "exercise_3.9.rkt" "exercise_3.13.rkt~" "exercise_3.14.rkt" "exercise_3.8.rkt" "exercise_3.10.rkt" "exercise_3.17.rkt" "exercise_3.15.rkt" "exercise_3.12.rkt" "exercise_3.11.rkt" "exercise_3.19.rkt" "exercise_3.4.rkt" "exercise_3.25.rkt~" "exercise_3.17.rkt~" "exercise_3.1.rkt" "exercise_3.19.rkt~" "exercise_3.3.rkt~" "exercise_3.4.rkt~" "exercise_3.14.rkt~" "exercise_3.3.rkt" "exercise_3.2.rkt~" "exercise_3.16.rkt~" "exercise_3.23.rkt~" "exercise_3.26.rkt~" "exercise_3.25.rkt" "exercise_3.13.rkt" "exercise_3.12.rkt~" "exercise_3.5.rkt" "exercise_3.21.rkt" "./" "../" "exercise_3.16.rkt" "exercise_3.26.rkt" "exercise_3.2.rkt" "exercise_3.22.rkt" "exercise_3.6.rkt" "exercise_3.7.rkt~" "exercise_3.1.rkt~" "exercise_3.7.rkt" "exercise_3.20.rkt~" "exercise_3.18.rkt" "exercise_3.23.rkt" "exercise_3.22.rkt~" "exercise_3.18.rkt~" "exercise_3.11.rkt~")
 
  ("/home/carson/projects/sicp/chapter2/" (26267 5196 993004 281000) "exercise_2.85.rkt~" "exercise_2.12" "exercise_2.90.rkt" "exercise_2.44.rkt" "exercise_2.38" "exercise_2.78.rkt" "exercise_2.47.rkt" "exercise_2.83.rkt" "exercise_2.16" "exercise_2.23" "exercise_2.26" "exercise_2.41" "exercise_2.74.rkt" "exercise_2.55.rkt" "exercise_2.34" ".#excercise_2.66.rkt" "exercise_2.28" "exercise_2.29" "exercise_2.8" "exercise_2.95.rkt" "exercise_2.67.rkt~" "exercise_2.89.rkt" "exercise_2.45.rkt" "exercise_2.81.rkt" "exercise_2.68.rkt" "exercise_2.11" "exercise_2.30" "exercise_2.86.rkt" "exercise_2.80.rkt~" "exercise_2.40" "exercise_2.22" "exercise_2.9" "exercise_2.33" "exercise_2.86.rkt~" "exercise_2.13" "exercise_2.27" "exercise_2.42.rkt" "exercise_2.89.rkt~" "exercise_2.1" "exercise_2.7" "exercise_2.72.rkt" "exercise_2.82.rkt~" "exercise_2.91.rkt~" "exercise_2.79.rkt" "exercise_2.5" "exercise_2.78.rkt~" "exercise_2.53.rkt" "exercise_2.58.rkt" "exercise_2.36" "exercise_2.79.rkt~" "exercise_2.17" "exercise_2.93.rkt" "exercise_2.4" "exercise_2.57.rkt" "exercise_2.37" "exercise_2.59.rkt" "exercise_2.77.rkt" "exercise_2.3" "#excercise_2.66.rkt#" "exercise_2.15" "exercise_2.31" "exercise_2.92.rkt" "exercise_2.87.rkt~" "exercise_2.50.rkt" "exercise_2.44.scm" "exercise_2.24" "exercise_2.76.rkt" "exercise_2.62.rkt" "exercise_2.74.rkt~" "excercise_2.66.rkt" "exercise_2.6" "exercise_2.14" "exercise_2.88.rkt~" "exercise_2.56.rkt" "exercise_2.39" "exercise_2.73.rkt" "exercise_2.2" "exercise_2.70.rkt" "exercise_2.32" "exercise_2.88.rkt" "exercise_2.69.rkt" "exercise_2.18" "exercise_2.63.rkt" "exercise_2.21" "exercise_2.91.rkt" "./" "../" "exercise_2.83.rkt~" "exercise_2.25" "exercise_2.51.rkt" "exercise_2.52.rkt" "exercise_2.20" "exercise_2.85.rkt" "exercise_2.94.rkt~" "exercise_2.87.rkt" "exercise_2.81.rkt~" "exercise_2.68.rkt~" "exercise_2.49.rkt" "exercise_2.69.rkt~" "exercise_2.61.rkt" "exercise_2.44" "exercise_2.48.rkt" "exercise_2.64.rkt" "exercise_2.84.rkt" "exercise_2.80.rkt" "exercise_2.67.rkt" "exercise_2.70.rkt~" "exercise_2.96.rkt" "exercise_2.94.rkt" "exercise_2.97.rkt" "exercise_2.84.rkt~" "exercise_2.77.rkt~" "exercise_2.93.rkt~" "exercise_2.75.rkt" "exercise_2.65.rkt" "exercise_2.60.rkt" "exercise_2.10" "exercise_2.54.rkt" "exercise_2.95.rkt~" "exercise_2.46.rkt" "exercise_2.71.rkt" "exercise_2.35" "exercise_2.82.rkt" "exercise_2.19")
