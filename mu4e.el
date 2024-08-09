@@ -46,7 +46,7 @@
       mu4e-headers-auto-update t                ; avoid to type `g' to update
       mu4e-view-show-images t                   ; show images in the view buffer
       mu4e-compose-signature-auto-include nil   ; I don't want a message signature
-      mu4e-use-fancy-chars t)                   ; allow fancy icons for mail threads
+      mu4e-use-fancy-chars nil)                   ; allow fancy icons for mail threads
 
 
 (setq mu4e-compose-reply-ignore-address '("no-?reply" "carsonbring@gmail.com"))

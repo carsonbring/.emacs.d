@@ -151,6 +151,9 @@ package-archive-priorities
   (setq pyvenv-workon ".venv")
   (pyvenv-mode 1))
 
+(use-package all-the-icons
+  :ensure t
+  :if (display-graphic-p))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
