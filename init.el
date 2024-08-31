@@ -1,4 +1,12 @@
 ;; -*- lexical-binding: t -*-
+;; Java setup file -08-30-2024
+(setenv "JAVA_HOME" "/usr/lib/jvm/jdk-22.0.2-oracle-x64")
+
+;;; disable ring-bell when backspace key is pressed
+(setq ring-bell-function 'ignore)
+
+(setq whitespace-line-column 1000) 
+
 
 ;;; Custom Keymaps
 (global-set-key (kbd "C-c i") 'insert-parentheses)
@@ -11,7 +19,7 @@
 (set-face-attribute 'default nil :height 140)
 
 (load (expand-file-name "mu4e.el" user-emacs-directory))
-
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
 
 (setq user-cache-directory (concat EMACS_DIR "cache"))
 (setq backup-directory-alist `(("." . ,(expand-file-name "backups" user-cache-directory)))
@@ -36,8 +44,9 @@
 
 ;; Add the melpa emacs repo, where most packages are
 (require 'package)
+(require 'all-the-icons)
 
-
+(add-to-list 'image-types 'svg)
 ;; Setting package archives
 (setq package-archives
 '(("GNU ELPA" . "https://elpa.gnu.org/packages/")
@@ -46,9 +55,9 @@
 ("GNU DEVEL" . "https://elpa.gnu.org/devel/"))
 package-archive-priorities
 '(("MELPA Stable" . 7)
-  ("MELPA" . 5)
+  ("MELPA" . 10)
   ("GNU DEVEL" . 3)
-("GNU ELPA" . 10)))
+("GNU ELPA" . 5)))
 (package-initialize)
 
  (setq package-install-upgrade-built-in t)
@@ -124,8 +133,8 @@ package-archive-priorities
 
 (use-package kaolin-themes
   :config
-  (load-theme 'kaolin-dark t)
-  (kaolin-treemacs-theme))
+   (load-theme 'kaolin-dark t))
+   
 
 ;; Projectile - EZ navigation within project. ADD .projectile FILE AND USE C-c p
 (use-package projectile 
@@ -187,14 +196,25 @@ package-archive-priorities
 ;; Allows moving through wrapped lines as they appear
 (setq line-move-visual t)
 
+
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode))
+
 ;; lsp-mode setup
 ;; Use C-c l to activate 
+
+(use-package lsp-java 
+:ensure t
+:config (add-hook 'java-mode-hook 'lsp))
+
 (use-package lsp-mode
 :ensure t
 :hook (
-       (lsp-mode . lsp-enable-which-key-integration)
-       (python-mode . lsp)
-	   (java-mode . #'lsp-deferred)
+   (lsp-mode . lsp-enable-which-key-integration)
+   (java-mode . #'lsp-deferred)
+   (typescript-mode . lsp)
 )
 :init (setq 
     lsp-keymap-prefix "C-c l"              ; this is for which-key integration documentation, need to use lsp-mode-map
@@ -202,19 +222,14 @@ package-archive-priorities
     read-process-output-max (* 1024 1024)  ; 1 mb
     lsp-completion-provider :capf
     lsp-idle-delay 0.500
-	lsp-headerline-breadcrumb-icons-enable nil
 )
 :config 
     (setq lsp-intelephense-multi-root nil) ; don't scan unnecessary projects
     (with-eval-after-load 'lsp-intelephense
     (setf (lsp--client-multi-root (gethash 'iph lsp-clients)) nil))
 	(define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
-	)
-
-(use-package lsp-java 
-:ensure t
-:config (add-hook 'java-mode-hook 'lsp))
-
+)
+(use-package hydra)
 ;; lsp-pyright setup
 (use-package lsp-pyright
   :ensure t
@@ -225,21 +240,25 @@ package-archive-priorities
   (setq lsp-keymap-prefix "C-c l")
   )
 ;Assign M-9 to show error list
-(use-package lsp-treemacs
-  :after (lsp-mode treemacs)
+(use-package dap-mode
   :ensure t
-  :commands lsp-treemacs-errors-list
+  :after (lsp-mode)
+  :functions dap-hydra/nil
+  :config
+  (require 'dap-java)
   :bind (:map lsp-mode-map
-         ("M-9" . lsp-treemacs-errors-list)))
+         ("<f5>" . dap-debug)
+         ("M-<f5>" . dap-hydra))
+  :hook ((dap-mode . dap-ui-mode)
+    (dap-session-created . (lambda (&_rest) (dap-hydra)))
+    (dap-terminated . (lambda (&_rest) (dap-hydra/nil)))))
+
+(use-package dap-java :ensure nil)
 
 
 
-(use-package treemacs
-  :ensure t
-  :commands (treemacs)
-  :after (lsp-mode))
 
-; C-c 1 T
+										; C-c 1 T
 (use-package lsp-ui
 :ensure t
 :after (lsp-mode)
@@ -250,6 +269,24 @@ package-archive-priorities
       lsp-ui-doc-position 'bottom
 	  lsp-ui-doc-max-width 100
 ))
+
+(use-package lsp-treemacs
+  :after (lsp-mode treemacs)
+  :ensure t
+  :commands lsp-treemacs-errors-list
+  :bind (:map lsp-mode-map
+         ("M-9" . lsp-treemacs-errors-list)))
+
+(use-package treemacs
+  :ensure t
+  :commands (treemacs)
+  :after (lsp-mode))
+
+ 
+
+(use-package helm-lsp)
+(use-package helm
+  :config (helm-mode))
 
 ;;pyvenv setup
 (use-package pyvenv
@@ -322,8 +359,10 @@ package-archive-priorities
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("74e2ed63173b47d6dc9a82a9a8a6a9048d89760df18bc7033c5f91ff4d083e37" default))
  '(package-selected-packages
-   '(kaolin-themes posframe treesit-auto spinner lsp-mode rainbow-delimiters paredit company flycheck racket-mode smex magit geiser-racket geiser-mit)))
+   '(treemacs-nerd-icons treemacs-all-the-icons magit-file-icons ob-raku flycheck-raku helm-lsp all-the-icons-completion all-the-icons-dired all-the-icons-gnus all-the-icons-ibuffer all-the-icons-ivy all-the-icons-ivy-rich all-the-icons-nerd-fonts almost-mono-themes raku-mode kaolin-themes posframe treesit-auto spinner lsp-mode rainbow-delimiters paredit company flycheck racket-mode smex magit geiser-racket geiser-mit)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
