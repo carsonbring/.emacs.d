@@ -3,6 +3,7 @@
 ;;; Custom Keymaps
 (global-set-key (kbd "C-c i") 'insert-parentheses)
 
+(setq EMACS_DIR "~/.emacs.d/")
 ;;; Code:
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 ;; font size
@@ -12,12 +13,30 @@
 (load (expand-file-name "mu4e.el" user-emacs-directory))
 
 
+(setq user-cache-directory (concat EMACS_DIR "cache"))
+(setq backup-directory-alist `(("." . ,(expand-file-name "backups" user-cache-directory)))
+      url-history-file (expand-file-name "url/history" user-cache-directory)
+      auto-save-list-file-prefix (expand-file-name "auto-save-list/.saves-" user-cache-directory)
+      projectile-known-projects-file (expand-file-name "projectile-bookmarks.eld" user-cache-directory))
 
+(global-display-line-numbers-mode)
+
+;; Disable scrollbar and toolbar
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+
+;; Automatically add ending brackets and braces
+(electric-pair-mode 1)
+
+
+;; Make sure tab-width is 4 and not 8
+(setq-default tab-width 4)
 
 
 
 ;; Add the melpa emacs repo, where most packages are
 (require 'package)
+
 
 ;; Setting package archives
 (setq package-archives
@@ -26,10 +45,10 @@
 ("MELPA" . "https://melpa.org/packages/")
 ("GNU DEVEL" . "https://elpa.gnu.org/devel/"))
 package-archive-priorities
-'(("MELPA Stable" . 10)
+'(("MELPA Stable" . 7)
   ("MELPA" . 5)
   ("GNU DEVEL" . 3)
-("GNU ELPA" . 2)))
+("GNU ELPA" . 10)))
 (package-initialize)
 
  (setq package-install-upgrade-built-in t)
@@ -48,6 +67,19 @@ package-archive-priorities
 ;; Install use-package if it hasn't been installed
 (when (not (package-installed-p 'use-package)) (package-install 'use-package))
 (require 'use-package)
+
+
+
+
+
+;;;; PACKAGES
+
+; Loading env variables properly 
+(use-package exec-path-from-shell :ensure t)
+(exec-path-from-shell-initialize)
+
+;;Java setup
+(load (expand-file-name "java.el" user-emacs-directory))
 
 ;; ido-mode provides a better file/buffer-selection interface
 (use-package ido
@@ -79,6 +111,37 @@ package-archive-priorities
              :config
              (global-flycheck-mode))
 
+;; Disables ansi color in compilation mode
+(defun my/ansi-colorize-buffer ()
+(let ((buffer-read-only nil))
+(ansi-color-apply-on-region (point-min) (point-max))))
+
+(use-package ansi-color
+:ensure t
+:config
+(add-hook 'compilation-filter-hook 'my/ansi-colorize-buffer)
+)
+
+(use-package kaolin-themes
+  :config
+  (load-theme 'kaolin-dark t)
+  (kaolin-treemacs-theme))
+
+;; Projectile - EZ navigation within project. ADD .projectile FILE AND USE C-c p
+(use-package projectile 
+:ensure t
+:init (projectile-mode +1)
+:config 
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+)
+
+;; Quick run
+(use-package quickrun 
+:ensure t
+:bind ("C-c r" . quickrun))
+;; Yasnippet abbreviations - pr for System.out.println()
+(use-package yasnippet :config (yas-global-mode))
+(use-package yasnippet-snippets :ensure t)
 ;; Autocomplete popups
 (use-package company
              :ensure t
@@ -125,10 +188,33 @@ package-archive-priorities
 (setq line-move-visual t)
 
 ;; lsp-mode setup
+;; Use C-c l to activate 
 (use-package lsp-mode
-  :ensure t
-  :hook (python-mode . lsp)
-  :commands lsp)
+:ensure t
+:hook (
+       (lsp-mode . lsp-enable-which-key-integration)
+       (python-mode . lsp)
+	   (java-mode . #'lsp-deferred)
+)
+:init (setq 
+    lsp-keymap-prefix "C-c l"              ; this is for which-key integration documentation, need to use lsp-mode-map
+    lsp-enable-file-watchers nil
+    read-process-output-max (* 1024 1024)  ; 1 mb
+    lsp-completion-provider :capf
+    lsp-idle-delay 0.500
+	lsp-headerline-breadcrumb-icons-enable nil
+)
+:config 
+    (setq lsp-intelephense-multi-root nil) ; don't scan unnecessary projects
+    (with-eval-after-load 'lsp-intelephense
+    (setf (lsp--client-multi-root (gethash 'iph lsp-clients)) nil))
+	(define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
+	)
+
+(use-package lsp-java 
+:ensure t
+:config (add-hook 'java-mode-hook 'lsp))
+
 ;; lsp-pyright setup
 (use-package lsp-pyright
   :ensure t
@@ -138,6 +224,32 @@ package-archive-priorities
   :config
   (setq lsp-keymap-prefix "C-c l")
   )
+;Assign M-9 to show error list
+(use-package lsp-treemacs
+  :after (lsp-mode treemacs)
+  :ensure t
+  :commands lsp-treemacs-errors-list
+  :bind (:map lsp-mode-map
+         ("M-9" . lsp-treemacs-errors-list)))
+
+
+
+(use-package treemacs
+  :ensure t
+  :commands (treemacs)
+  :after (lsp-mode))
+
+; C-c 1 T
+(use-package lsp-ui
+:ensure t
+:after (lsp-mode)
+:bind (:map lsp-ui-mode-map
+         ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
+         ([remap xref-find-references] . lsp-ui-peek-find-references))
+:init (setq lsp-ui-doc-delay 1.5
+      lsp-ui-doc-position 'bottom
+	  lsp-ui-doc-max-width 100
+))
 
 ;;pyvenv setup
 (use-package pyvenv
@@ -211,7 +323,7 @@ package-archive-priorities
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(treesit-auto spinner lsp-mode rainbow-delimiters paredit company flycheck racket-mode smex magit geiser-racket geiser-mit)))
+   '(kaolin-themes posframe treesit-auto spinner lsp-mode rainbow-delimiters paredit company flycheck racket-mode smex magit geiser-racket geiser-mit)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
