@@ -2,55 +2,34 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/Carson/classes/" . "ag/")
- ("/home/Carson/projects/api-portal/" . "table/")
- ("/home/Carson/projects/agentic_frontend/" . "src/")
- ("/home/Carson/projects/agentic_frontend/src/components/" . "ProjectPopup/")
+ ("/home/Carson/projects/agentic_frontend/src/components/" . "Chat/")
  ("/home/Carson/projects/agentic_frontend/src/pages/" . "Projects/")
- ("/home/Carson/projects/agentic_frontend/src/" . "types/")
- ("/home/Carson/projects/sicp/" . "chapter5/")
- ("/home/Carson/projects/" . "agentic_frontend/")
- ("/home/Carson/.emacs.d/" . "lisp/")
+ ("/home/Carson/projects/agentic_frontend/src/" . "components/")
+ ("/home/Carson/projects/sicp/" . "chapter4/")
+ ("/home/Carson/projects/" . "sicp/")
+ ("/home/Carson/.emacs.d/" . "auto-save-list/")
  ("/home/Carson/.config/" . "polybar/")
  ("/home/Carson/" . ".emacs.d/")
  ("/home/carson/projects/sicp/" . "chapter2/")
  ("/" . "home/")
  ("/home/carson/projects/consolidated_backend/" . "app/")
  ("/home/carson/.emacs.d/" . "spinner.el/")
- ("/home/" . "Carson/")
+ ("/home/" . "carson/")
  ("/home/carson/projects/" . "sicp/")
  ("/home/carson/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/Carson/.emacs.d/"
- "/home/Carson/.emacs.d/lisp/"
- "/home/Carson/projects/agentic_frontend/src/components/ProjectPopup/"
- "/home/Carson/projects/agentic_frontend/src/types/"
- "/home/Carson/projects/agentic_frontend/src/components/TeamPopup/"
- "/home/Carson/projects/agentic_frontend/src/"
- "/home/Carson/projects/agentic_frontend/src/hooks/"
- "/home/Carson/projects/agentic_frontend/src/pages/Agentic/"
- "/home/Carson/projects/sicp/chapter5/"
- "/home/Carson/projects/agentic_frontend/src/components/Navbar/"
- "/home/Carson/projects/agentic_frontend/src/components/Chat/"
- "/home/Carson/projects/agentic_frontend/src/pages/Projects/"
- "/home/Carson/projects/agentic_frontend/"
- "/home/Carson/projects/api-portal/"
- "/home/Carson/projects/k8s/"
- "/home/Carson/classes/ag/"
- "/home/Carson/classes/csci359/"
- "/home/Carson/projects/sicp/chapter2/"
- "/home/Carson/projects/agentic_frontend/src/components/StoryList/"
- "/home/Carson/Downloads/"
- "/home/Carson/projects/sicp/"
  "/home/Carson/projects/sicp/chapter4/"
- "/home/Carson/"
- "/home/Carson/bin/"
- "/home/Carson/.config/polybar/"
+ "/home/Carson/projects/agentic_frontend/src/components/Chat/"
+ "/home/Carson/projects/agentic_frontend/src/components/ProjectPopup/"
+ "/home/Carson/projects/agentic_frontend/src/pages/Projects/"
+ "/home/Carson/projects/agentic_frontend/src/types/"
  "/home/Carson/projects/agentic_frontend/src/api/"
- "/home/Carson/projects/api-portal/table/"
+ "/home/Carson/projects/agentic_frontend/src/hooks/"
+ "/home/Carson/.emacs.d/"
+ "/home/Carson/.config/polybar/"
  "/home/Carson/.config/i3status/"
  "/home/Carson/.config/i3/"
  "/home/carson/projects/sicp/chapter3/"
@@ -66,83 +45,47 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
- "mu4e.el"
- "pretty.el"
- "files.el"
- "lint-lsp.el"
- "flycheck_preferences.el"
- "preferences.el"
- "java.el"
- "ListProject.tsx"
- "team.ts"
+ "exercise_4.35.rkt"
+ "exercise_4.34.rkt"
+ "exercise_4.33.rkt"
+ "exercise_4.32.rkt"
+ "exercise_4.31.rkt"
+ "Chat.tsx"
+ "ProjectPopup.tsx"
+ "Projects.tsx"
+ "agent.ts"
+ "index.ts"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/Carson/.emacs.d/lisp/" (26323 47293 957647 711000) "../" "./" "preferences.el" "files.el" "lint-lsp.el~" "lint-lsp.el" "preferences.el~" "mu4e.el" "files.el~" "java.el")
+ ("/home/Carson/.emacs.d/" (26294 32664 27209 523000) "../" "./" "eln-cache/" "elpa/" ".gitignore" "init.el" ".git/" "spinner.el/" "auto-save-list/" "tutorial/" "smex-items" ".lsp-session-v1" "#ido.last#" "tree-sitter/" "transient/" ".mbsyncpass.gpg" ".mbsyncrc" "ido.last" "racket-mode/" "mu4e.el" "ido.last~" "eshell/")
 
- ("/home/Carson/.emacs.d/" (26323 47288 287647 966000) ".#init.el" "../" "./" "eln-cache/" "elpa/" ".gitignore" "init.el" ".git/" "spinner.el/" "auto-save-list/" "tutorial/" "smex-items" "network-security.data" ".lsp-session-v1" "url/" "#ido.last#" "tree-sitter/" "transient/" ".mbsyncpass.gpg" ".mbsyncrc" "eww-bookmarks" "ido.last" "racket-mode/" "mu4e.el" "lisp/" "ido.last~" "#init.el#" "eshell/")
+ ("/home/Carson/projects/agentic_frontend/src/pages/Projects/" (26294 10426 307721 927000) "../" "./" "Projects.tsx" "Projects.tsx~" "Projects.css~" "Projects.css")
 
- ("/home/Carson/" (26323 47034 992 935000) ".kaggle/" "C++/" "../" ".azure/" "bin/" "./" ".cargo/" ".pki/" ".java/" "mail/" ".Xauthority" "games/" "bash/" ".bash_logout" ".xscreensaver" ".azuredatastudio/" "custom_site_prefs/" "VirtualBox VMs/" ".zshrc" ".Xresources" ".config/" "funny/" "Downloads/" ".xsession-errors.old" "stevie" ".vscode/" ".bashrc" ".gradle/" ".themes/" ".ghc/" ".bash_history" ".netbeans/" ".smex-items" "Passwords.kdbx" ".bash_profile" "frameworks/" ".dmrc" ".gitconfig" "ai/" ".emacs.d/" ".mozilla/" ".idlerc/" "clubs/" "opt/" "git/" ".vnc/" "backupemacs/" "email/" ".local/" ".gnupg/" ".kube/" ".xsession-errors" ".eclipse/" "languages/" ".icons/" ".cache/" "2024-08-28-215553_1366x768_scrot.png" ".xession" "linknusNotes/" "records/" ".swt/" ".python_history" ".bashrc~" ".npm/" ".fehbg" "go/" "structs_and_algos/" "bytele/" ".xinitrc" ".minecraft/" "packageHelpers/" "projects/" ".ssh/" ".authinfo.gpg" "classes/" ".geiser_history.mit" "2024-08-27-214739_1366x768_scrot.png" ".emacs~" ".gtkrc-2.0" "vidya/" ".vimrc" ".geiser_history.racket" ".viminfo" "#*message*-20240826-150200#")
+ ("/home/Carson/projects/agentic_frontend/src/components/ProjectPopup/" (26294 10456 217722 833000) "../" "./" "ProjectPopup.tsx~" "ProjectPopup.tsx")
 
- ("/home/" (25830 49176 735670 712000) "../" "./" "Carson/")
+ ("/home/Carson/projects/sicp/chapter4/" (26295 16710 758240 490000) "exercise_4.20.rkt" "exercise_4.25.rkt~" "exercise_4.11.rkt" "exercise_4.33.rkt" "../" "./" "exercise_4.24.rkt" "exercise_4.9.rkt" "exercise_4.32.rkt" "exercise_4.16.rkt" "exercise_4.2.rkt" "exercise_4.15.rkt" "exercise_4.1.rkt" "exercise_4.25.rkt" "exercise_4.34.rkt~" "exercise_4.16.rkt~" "exercise_4.21.rkt~" "exercise_4.17.rkt" "exercise_4.32.rkt~" "exercise_4.12.rkt" "exercise_4.26.rkt~" "exercise_4.34.rkt" "exercise_4.27.rkt" "exercise_4.31.rkt" "exercise_4.5.rkt" "exercise_4.30.rkt" "exercise_4.14.rkt" "exercise_4.22.rkt~" "exercise_4.18.rkt" "exercise_4.12.rkt~" "exercise_4.28.rkt" "exercise_4.21.rkt" "exercise_4.7.rkt" "exercise_4.7.rkt~" "exercise_4.26.rkt" "exercise_4.22.rkt" "exercise_4.4.rkt" "exercise_4.27.rkt~" "exercise_4.23.rkt" "exercise_4.8.rkt~" "exercise_4.29.rkt~" "exercise_4.6.rkt" "exercise_4.10.rkt" "exercise_4.3.rkt" "exercise_4.6.rkt~" "exercise_4.8.rkt" "exercise_4.19.rkt" "exercise_4.29.rkt" "exercise_4.13.rkt" "exercise_4.11.rkt~" "exercise_4.31.rkt~")
 
- ("/home/Carson/projects/agentic_frontend/src/components/TeamPopup/" (26322 8849 274312 723000) "../" "./" "AddTeam.tsx" "TeamPopup.tsx" "TeamPopup.tsx~" "AddTeam.tsx~")
+ ("/home/Carson/projects/agentic_frontend/src/components/Chat/" (26294 6948 564247 39000) "../" "./" "Chat.tsx~" "Chat.css~" "Chat.tsx")
 
- ("/home/Carson/projects/agentic_frontend/src/components/ProjectPopup/" (26322 13855 199999 984000) "../" "./" "AddProject.tsx" "EditProject.tsx" "ListProject.tsx" "ProjectPopup.tsx~" "ProjectPopup.tsx")
+ ("/home/Carson/projects/agentic_frontend/src/components/" (26294 9273 844353 759000) "../" "./" "Chat/" "Navbar.tsx~" "ProjectPopup/" "Navbar.tsx" "Navbar/")
 
- ("/home/Carson/projects/agentic_frontend/src/api/" (26322 5718 567670 629000) "../" "./" "index.ts" "index.ts~")
+ ("/home/Carson/projects/agentic_frontend/src/hooks/" (26294 10149 421046 904000) "useProjects.ts" "../" "#useTeams.ts#" "./" "useProjects.ts~" "#useTeams.ts#~" "useTeam.ts" "useTeam.ts~")
 
- ("/home/Carson/projects/agentic_frontend/src/components/Chat/" (26322 5718 567670 629000) "../" "./" "Chat.tsx~" "Chat.css~" "Chat.tsx")
+ ("/home/Carson/projects/agentic_frontend/src/pages/" (26294 6948 564247 39000) "../" "./" "Home/" "Projects/" "Home.tsx~")
 
- ("/home/Carson/projects/agentic_frontend/src/components/Navbar/" (26322 5718 567670 629000) "../" "./" "Navbar.tsx~" "Navbar.tsx")
+ ("/home/Carson/projects/agentic_frontend/src/api/" (26294 8820 567673 423000) "../" "./" "index.ts" "index.ts~")
 
- ("/home/Carson/projects/sicp/chapter5/" (26321 16604 33941 930000) "exercise_5.2.rkt~" "exercise_5.18.rkt" "exercise_5.10.rkt" "../" "./" "exercise_5.16.rkt~" "exercise_5.13.rkt~" "exercise_5.9.rkt" "exercise_5.17.rkt~" "exercise_5.14.rkt" "exercise_5.9.rkt~" "exercise_5.4.rkt~" "exercise_5.7.rkt" "exercise_5.15.rkt" "exercise_5.18.rkt~" "exercise_5.20.rkt" "exercise_5.4.rkt" "exercise_5.1.rkt~" "exercise_5.6.rkt" "exercise_5.15.rkt~" "exercise_5.13.rkt" "exercise_5.2.rkt" "exercise_5.5.rkt" "exercise_5.16.rkt" "exercise_5.1.rkt" "exercise_5.19.rkt" "exercise_5.12.rkt" "exercise_5.11.rkt" "exercise_5.21.rkt" "exercise_5.3.rkt~" "exercise_5.17.rkt" "exercise_5.8.rkt~" "exercise_5.3.rkt" "exercise_5.8.rkt" "exercise_5.14.rkt~" "exercise_5.11.rkt~" "exercise_5.12.rkt~")
+ ("/home/Carson/projects/agentic_frontend/src/types/" (26294 6948 564247 39000) "../" "./" "projects.ts~" "llm.ts" "llm.ts~" "testcase.ts~" "team.ts~" "team.ts" "agent.ts~" "projects.ts" "requirement.ts~" "testcase.ts" "user.ts" "requirement.ts" "UserGroup.ts" "agent.ts")
 
- ("/home/Carson/projects/agentic_frontend/src/pages/Agentic/" (26322 6807 764328 690000) "../" "./" "Agentic.tsx~" "Agentic.tsx")
+ ("/home/Carson/projects/agentic_frontend/src/" (26294 6948 564247 39000) "../" "./" "types/" "App.css" "pages/" "App.tsx" "index.css" "index.css~" "api/" "main.tsx~" "App.tsx~" "hooks/" "assets/" "main.tsx" "components/" "vite-env.d.ts" "App.css~")
 
- ("/home/Carson/projects/agentic_frontend/src/hooks/" (26322 6183 744333 629000) "useProjects.ts" "../" "#useTeams.ts#" "./" "useProjects.ts~" "#useTeams.ts#~" "useTeam.ts" "useTeam.ts~")
+ ("/home/Carson/" (26294 4347 591038 73000) ".kaggle/" "C++/" "../" "./" ".cargo/" ".pki/" ".java/" "mail/" ".Xauthority" "games/" "bash/" ".bash_logout" ".xscreensaver" ".azuredatastudio/" "custom_site_prefs/" "VirtualBox VMs/" ".zshrc" ".Xresources" ".config/" "funny/" "Downloads/" ".xsession-errors.old" "stevie" ".vscode/" ".bashrc" ".gradle/" ".themes/" ".ghc/" ".bash_history" ".netbeans/" ".smex-items" ".bash_profile" "frameworks/" ".dmrc" ".gitconfig" "ai/" ".emacs.d/" ".mozilla/" ".idlerc/" "clubs/" "opt/" "git/" ".vnc/" "backupemacs/" "email/" ".local/" ".gnupg/" ".xsession-errors" ".eclipse/" "languages/" ".icons/" ".cache/" ".xession" "linknusNotes/" "records/" ".swt/" ".python_history" ".npm/" ".fehbg" "go/" "structs_and_algos/" "bytele/" ".xinitrc" ".minecraft/" "packageHelpers/" "projects/" ".ssh/" ".authinfo.gpg" "classes/" ".geiser_history.mit" ".emacs~" ".gtkrc-2.0" "vidya/" ".vimrc" ".geiser_history.racket" ".viminfo")
 
- ("/home/Carson/projects/agentic_frontend/src/" (26322 6316 534332 584000) "../" "./" "types/" "App.css" "pages/" "App.tsx" "index.css" "index.css~" "api/" "main.tsx~" "App.tsx~" "hooks/" "assets/" "main.tsx" "components/" "vite-env.d.ts" "App.css~")
+ ("/home/Carson/.config/polybar/" (26279 65368 524165 517000) "../" "config.ini~" "./" "polybar.sh" "config.ini")
 
- ("/home/Carson/projects/agentic_frontend/src/components/StoryList/" (26322 5718 567670 629000) "../" "./" "AddStory.tsx" "EditStory.tsx" "StoryList.tsx" "StoryList.css" "EditTestCase.tsx" "AddTestCase.tsx")
-
- ("/home/Carson/projects/agentic_frontend/" (26322 5893 157669 268000) "../" "./" ".eslintrc.cjs" ".gitignore" "public/" ".git/" "postcss.config.js" "tsconfig.json" "src/" "vite.config.ts" "package.json" "package-lock.json" "index.html" "node_modules/" "README.md" "tailwind.config.js" "notes.org" "tsconfig.node.json" "tsconfig.app.json")
-
- ("/home/Carson/projects/agentic_frontend/src/components/" (26322 5718 567670 629000) "../" "./" "StoryList/" "Chat/" "TestWindow/" "Navbar.tsx~" "TeamPopup/" "ProjectPopup/" "Navbar/")
-
- ("/home/Carson/projects/agentic_frontend/src/pages/Projects/" (26322 5718 571003 962000) "../" "./" "Projects.tsx" "Projects.tsx~" "Projects.css~" "Projects.css")
-
- ("/home/Carson/projects/agentic_frontend/src/pages/" (26322 5718 571003 962000) "Agentic/" "../" "./" "Home/" "Projects/" "Home.tsx~")
-
- ("/home/Carson/projects/api-portal/table/" (26320 43982 946662 43000) "project.py" "../" "user.py" "./" "requirement.py" "llm.py~" "llm.py" "agent.py" "test_case.py" "project.py~" "user_group.py" "team_assignments.py" "team.py~" "user.py~" "__init__.py" "agent.py~" "requirement.py~" "team.py" "__init__.py~" "user_group.py~" "test_case.py~" "team_assignments.py~")
-
- ("/home/Carson/Downloads/" (26320 40276 814550 796000) "mu-1.12.5/" "../" "./" "IMG_6617.jpeg" "book-Z-H-31.html" "emacs-29.4/" "openssh-askpass/" "emacs-29.4.tar.xz" "0xProto.zip" "book-Z-H-31(1).html~" "book-Z-H-32.html" ".~lock.Assignment_1_489_689_F23.docx#" "book-Z-H-31(2).html" ".~lock.Slides_1_Introduction(1).pptx#" ".~lock.Assignment1_2023 Lottery(2).docx#" "kubectl" "kubectl.sha256" "m330O9Rn.html" "emacs-lucid/" "World Food Crops fall 2024-fall(1).doc" "README.md" "LICENSE" "BotFramework-Emulator-4.14.1-linux-x86_64.AppImage" "book-Z-H-31(1).html" "mu-1.12.5.tar.xz" "survey.doc")
-
- ("/home/Carson/classes/ag/" (26320 42612 247870 803000) "../" "./" "notes.org~" "notes.org")
-
- ("/home/Carson/projects/api-portal/" (26320 43982 946662 43000) "requirements.txt" "app.py" "../" "./" "models.py" "utils.py" ".git/" "Dockerfile" "schema.sql" "table/")
-
- ("/home/Carson/projects/k8s/" (26320 43783 583329 775000) "../" "./" "poc-ingress-ingress.yaml")
-
- ("/home/Carson/projects/" (26320 43738 103330 34000) "bot_sdk_sf/" "../" "./" "GPT_action_sf/" "k8s/" "api-portal/" "agentic_frontend/" "sicp/" "consolidated_backend/")
-
- ("/home/Carson/classes/" (26320 39912 857886 181000) "../" "./" "csci422/" "CSCI489/" "ag/" "functional/" "algo/" "research/" "micro/" "CSCI213/" "csci359/")
-
- ("/home/Carson/classes/csci359/" (26319 57218 941646 650000) "../" "./" "Jill West - CompTIA Network+ Guide to Networks 9th edition-Cengage Learning (2021).pdf" "notes.org~" "notes.org")
-
- ("/home/Carson/bin/" (26319 30102 514878 113000) "../" "./" "hal_tunnel.sh" "hal_tunnel.sh~" "hallogin.sh")
-
- ("/home/Carson/projects/sicp/chapter2/" (26318 36834 627834 166000) "exercise_2.61.rkt~" "exercise_2.49.rkt~" "exercise_2.85.rkt" "exercise_2.4" "exercise_2.62.rkt" "exercise_2.15" "exercise_2.26" "../" "exercise_2.35" "exercise_2.5" "exercise_2.57.rkt" "exercise_2.64.rkt" "exercise_2.31" "./" "exercise_2.75.rkt" "exercise_2.9" "exercise_2.1" "exercise_2.25" "exercise_2.8" "exercise_2.82.rkt" "exercise_2.71.rkt" "exercise_2.51.rkt~" "exercise_2.17" "exercise_2.14" "exercise_2.61.rkt" "exercise_2.37" "exercise_2.67.rkt" "exercise_2.11" "exercise_2.22" "exercise_2.50.rkt" "exercise_2.21" "exercise_2.48.rkt~" "exercise_2.13" "exercise_2.89.rkt" "exercise_2.70.rkt" "exercise_2.12" "exercise_2.72.rkt" "exercise_2.51.rkt" "exercise_2.27" "exercise_2.68.rkt" "exercise_2.91.rkt" "exercise_2.44.rkt~" "exercise_2.18" "exercise_2.79.rkt" "exercise_2.96.rkt" "exercise_2.94.rkt" "exercise_2.97.rkt" "exercise_2.64.rkt~" "exercise_2.47.rkt" "exercise_2.90.rkt" "exercise_2.88.rkt" "exercise_2.44.scm" "exercise_2.44" "exercise_2.29" "exercise_2.30" "exercise_2.3" "exercise_2.62.rkt~" "exercise_2.76.rkt" "exercise_2.59.rkt" "exercise_2.54.rkt" "exercise_2.40" "exercise_2.42.rkt" "exercise_2.44.scm~" "exercise_2.41" "exercise_2.57.rkt~" "exercise_2.77.rkt" "exercise_2.53.rkt~" "exercise_2.65.rkt" "exercise_2.65.rkt~" "exercise_2.48.rkt" "exercise_2.84.rkt" "exercise_2.16" "exercise_2.24" "exercise_2.54.rkt~" "exercise_2.10" "exercise_2.93.rkt" "exercise_2.42.rkt~" "exercise_2.19" "excercise_2.66.rkt~" "exercise_2.73.rkt" "exercise_2.63.rkt~" "exercise_2.53.rkt" "exercise_2.56.rkt" "exercise_2.47.rkt~" "exercise_2.38" "exercise_2.74.rkt" "exercise_2.28" "exercise_2.60.rkt~" "exercise_2.55.rkt~" "exercise_2.36" "exercise_2.80.rkt" "exercise_2.92.rkt" "exercise_2.83.rkt" "exercise_2.56.rkt~" "exercise_2.45.rkt" "exercise_2.46.rkt" "exercise_2.60.rkt" "exercise_2.81.rkt" "exercise_2.49.rkt" "exercise_2.86.rkt" "exercise_2.45.rkt~" "exercise_2.39" "exercise_2.7" "exercise_2.55.rkt" "exercise_2.58.rkt~" "exercise_2.44.rkt" "exercise_2.46.rkt~" "exercise_2.52.rkt~" "exercise_2.78.rkt" "exercise_2.95.rkt" "exercise_2.69.rkt" "exercise_2.58.rkt" "exercise_2.2" "#excercise_2.66.rkt#" "exercise_2.32" "exercise_2.23" "exercise_2.20" "exercise_2.52.rkt" "exercise_2.63.rkt" "excercise_2.66.rkt" "exercise_2.34" "exercise_2.33" "exercise_2.87.rkt" "exercise_2.6")
-
- ("/home/Carson/projects/sicp/" (26316 34914 701466 851000) "hello" "../" ".gitattributes" "./" "chapter2/" "test" "sum" ".gitignore" "chapter5text~" ".git/" "chapter3/" "smallest-divisor" "chapter4/" "chapter5/" "product" "chapter1/")
-
- ("/home/Carson/projects/sicp/chapter4/" (26311 64389 213466 71000) "exercise_4.37.rkt" "exercise_4.70.rkt" "exercise_4.20.rkt" "exercise_4.25.rkt~" "exercise_4.70.rkt~" "exercise_4.11.rkt" "exercise_4.50.rkt" "exercise_4.55.rkt" "exercise_4.56.rkt~" "exercise_4.33.rkt" "exercise_4.37.rkt~" "../" "exercise_4.59.rkt~" "./" "exercise_4.63.rkt~" "exercise_4.56.rkt" "exercise_4.24.rkt" "exercise_4.9.rkt" "exercise_4.74.rkt~" "exercise_4.54.rkt~" "exercise_4.61.rkt~" "exercise_4.64.rkt" "exercise_4.35.rkt~" "exercise_4.32.rkt" "exercise_4.57.rkt~" "exercise_4.61.rkt" "exercise_4.62.rkt" "exercise_4.60.rkt" "exercise_4.76.rkt" "exercise_4.16.rkt" "exercise_4.2.rkt" "exercise_4.74.rkt" "exercise_4.15.rkt" "exercise_4.1.rkt" "exercise_4.50.rkt~" "exercise_4.52.rkt" "exercise_4.25.rkt" "exercise_4.34.rkt~" "exercise_4.16.rkt~" "exercise_4.38.rkt~" "exercise_4.55.rkt~" "exercise_4.51.rkt" "exercise_4.21.rkt~" "exercise_4.63.rkt" "exercise_4.17.rkt" "exercise_4.32.rkt~" "exercise_4.60.rkt~" "exercise_4.68.rkt" "exercise_4.45.rkt~" "exercise_4.12.rkt" "exercise_4.36.rkt" "exercise_4.72.rkt" "exercise_4.54.rkt" "exercise_4.35.rkt" "exercise_4.26.rkt~" "exercise_4.34.rkt" "exercise_4.53.rkt" "exercise_4.41.rkt~" "exercise_4.47.rkt~" "exercise_4.27.rkt" "exercise_4.31.rkt" "exercise_4.5.rkt" "exercise_4.48.rkt~" "exercise_4.30.rkt" "exercise_4.69.rkt~" "exercise_4.45.rkt" "exercise_4.43.rkt" "exercise_4.58.rkt~" "exercise_4.14.rkt" "exercise_4.42.rkt" "exercise_4.62.rkt~" "exercise_4.22.rkt~" "exercise_4.47.rkt" "exercise_4.49.rkt" "exercise_4.67.rkt" "exercise_4.18.rkt" "exercise_4.65.rkt" "exercise_4.36.rkt~" "exercise_4.12.rkt~" "exercise_4.28.rkt" "exercise_4.21.rkt" "exercise_4.7.rkt" "exercise_4.7.rkt~" "exercise_4.39.rkt~" "exercise_4.73.rkt" "exercise_4.49.rkt~" "exercise_4.26.rkt" "exercise_4.22.rkt" "exercise_4.4.rkt" "exercise_4.69.rkt" "exercise_4.27.rkt~" "exercise_4.23.rkt" "exercise_4.44.rkt" "exercise_4.8.rkt~" "exercise_4.29.rkt~" "exercise_4.40.rkt" "exercise_4.42.rkt~" "exercise_4.6.rkt" "exercise_4.10.rkt" "exercise_4.43.rkt~" "exercise_4.41.rkt" "exercise_4.38.rkt" "exercise_4.39.rkt" "exercise_4.48.rkt" "exercise_4.44.rkt~" "exercise_4.67.rkt~" "exercise_4.59.rkt" "exercise_4.57.rkt" "exercise_4.3.rkt" "exercise_4.58.rkt" "exercise_4.6.rkt~" "exercise_4.8.rkt" "exercise_4.71.rkt" "exercise_4.19.rkt" "exercise_4.66.rkt" "exercise_4.46.rkt" "exercise_4.29.rkt" "exercise_4.40.rkt~" "exercise_4.71.rkt~" "exercise_4.13.rkt" "exercise_4.75.rkt" "exercise_4.11.rkt~" "exercise_4.66.rkt~" "exercise_4.31.rkt~")
-
- ("/home/Carson/.config/polybar/" (26305 29205 396835 766000) "../" "config.ini~" "./" "polybar.sh" "config.ini")
-
- ("/home/Carson/projects/agentic_frontend/src/types/" (26303 27371 866602 657000) "../" "./" "projects.ts~" "llm.ts" "llm.ts~" "testcase.ts~" "team.ts~" "team.ts" "agent.ts~" "projects.ts" "requirement.ts~" "testcase.ts" "user.ts" "TeamAssignments.ts" "requirement.ts" "UserGroup.ts" "agent.ts")
+ ("/home/Carson/projects/sicp/" (26286 6162 485173 273000) "hello" "../" ".gitattributes" "./" "chapter2/" "test" "sum" ".gitignore" ".git/" "chapter3/" "smallest-divisor" "chapter4/" "product" "chapter1/")
 
  ("/home/Carson/.emacs.d/auto-save-list/" (26283 57737 335084 561000) "../" "./" ".saves-4623-carch~" ".saves-24956-carch~")
 
@@ -151,6 +94,10 @@
  ("/home/Carson/.config/i3status/" (25837 23625 758283 467000) "../" "./" "config")
 
  ("/home/Carson/.config/" (26245 44374 839885 881000) "emaildefaults" "polybar/" "kiorc" "VirtualBox/" "KDE/" "defaultcalendarrc" "i3blocks/" "../" "./" "libreoffice/" "cef_user_data/" "emailidentities" "akonadi_akonotes_resource_0rc" "dconf/" "evolution/" "gtk-3.0/" "azuredatastudio/" "kde.org/" "BraveSoftware/" "@bfemulator/" "akonadi_ical_resource_0rc" "config" "launch.sh" "akonadi_maildir_resource_0rc" "session/" "akonadi/" "nitrogen/" "gtk-2.0/" "akonadi-firstrunrc" "Code/" "eventviewsrc" "discord/" "akonadi_contacts_resource_0rc" "i3status/" "pulse/" "jgit/" "dolphinrc" "brightness_controller/" "libaccounts-glib/" "ngrok/" "specialmailcollectionsrc" "GIMP/" "QtProject.conf" "neofetch/" "i3/" "kwalletrc" "QtProject/" "kalendaracrc" "diode/" "mimeapps.list" "racket/" "Electron/" "vlc/" "fontforge/" "bunkus.org/" "i3-layout-manager/" "nvim/" "akonadi_indexing_agentrc" "korganizerrc" "kitty/" "clangd/")
+
+ ("/home/Carson/Downloads/" (26279 63185 504256 193000) "mu-1.12.5/" "../" "./" "IMG_6617.jpeg" ".~lock.Assignment_1_489_689_F23.docx#" ".~lock.Slides_1_Introduction(1).pptx#" ".~lock.Assignment1_2023 Lottery(2).docx#" "emacs-lucid/" "README.md" "LICENSE" "BotFramework-Emulator-4.14.1-linux-x86_64.AppImage" "mu-1.12.5.tar.xz")
+
+ ("/home/Carson/projects/" (26233 40147 347948 538000) "bot_sdk_sf/" "../" "./" "GPT_action_sf/" "sicp/" "consolidated_backend/")
 
  ("/home/carson/projects/sicp/chapter3/" (26267 6161 399729 640000) "exercise_3.5.rkt~" "exercise_3.21.rkt~" "exercise_3.20.rkt" "exercise_3.9.rkt" "exercise_3.13.rkt~" "exercise_3.14.rkt" "exercise_3.8.rkt" "exercise_3.10.rkt" "exercise_3.17.rkt" "exercise_3.15.rkt" "exercise_3.12.rkt" "exercise_3.11.rkt" "exercise_3.19.rkt" "exercise_3.4.rkt" "exercise_3.25.rkt~" "exercise_3.17.rkt~" "exercise_3.1.rkt" "exercise_3.19.rkt~" "exercise_3.3.rkt~" "exercise_3.4.rkt~" "exercise_3.14.rkt~" "exercise_3.3.rkt" "exercise_3.2.rkt~" "exercise_3.16.rkt~" "exercise_3.23.rkt~" "exercise_3.26.rkt~" "exercise_3.25.rkt" "exercise_3.13.rkt" "exercise_3.12.rkt~" "exercise_3.5.rkt" "exercise_3.21.rkt" "./" "../" "exercise_3.16.rkt" "exercise_3.26.rkt" "exercise_3.2.rkt" "exercise_3.22.rkt" "exercise_3.6.rkt" "exercise_3.7.rkt~" "exercise_3.1.rkt~" "exercise_3.7.rkt" "exercise_3.20.rkt~" "exercise_3.18.rkt" "exercise_3.23.rkt" "exercise_3.22.rkt~" "exercise_3.18.rkt~" "exercise_3.11.rkt~")
 
@@ -185,6 +132,8 @@
  ("/home/carson/.config/" (26252 33594 80569 717000) "xed/" "spotify/" "pulse/" "user-dirs.dirs" "nemo/" "goa-1.0/" "hexchat/" "ngrok/" "neofetch/" "xviewer/" "gtk-3.0/" "github-copilot/" "discord/" "caja/" "dconf/" "evolution/" "cinnamon/" "enchant/" "qt5ct/" "Electron/" "autostart/" "@bfemulator/" "./" "libreoffice/" "menus/" "user-dirs.locale" "../" "QtProject.conf" "nvim/" "keepassxc/" "cinnamon-session/" "mimeapps.list" "X-Cinnamon-xdg-terminals.list" "xdg-terminals.list" "cef_user_data/")
 
  ("/home/carson/.emacs.d/spinner.el/" (26249 39866 927296 885000) ".git/" "README.org" "spinner.el" "some-spinners.gif" "all-spinners.gif" "./" "../")
+
+ ("/home/" (26215 15656 240697 155000) "carson/" "./" "../")
 
  ("/home/carson/projects/AZdev_SF_Chabot/" (26227 8854 947829 377000) "bot.py" ".venv/" ".git/" "config.py" ".pylintrc" "__init__.py" ".gitignore" "report.png" ".env" "SF_chatbot" "./" "app.py" "adaptive" "../" "requirements.txt" "README.md" "SF bot" "deploymentTemplates/")
 )

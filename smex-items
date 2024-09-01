@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- package-install
- package-refresh-contents
- paredit-mode
+ magit
+ racket-stop-back-end
+ find-grep-dired
+ grep
+ find-grep
+ grep-find
  mu4e
- eshell
- mu4e-update-index
- delete-char
 )
 
 ;; ----- smex-data -----
 (
- (eshell . 17)
+ (eshell . 20)
  (package-install . 6)
  (package-install-from-buffer . 1)
  (write-file . 4)
@@ -20,12 +20,12 @@
  (display-line-numbers-mode . 1)
  (python-indent-shift-right . 4)
  (insert-parentheses . 10)
- (racket-stop-back-end . 2)
+ (racket-stop-back-end . 4)
  (dired-create-directory . 2)
  (spook . 12)
  (delete-file . 1)
  (make-directory . 2)
- (mu4e . 32)
+ (mu4e . 36)
  (pyvenv-create . 3)
  (pyvenv-menu . 1)
  (pyvenv-activate . 2)
@@ -33,4 +33,15 @@
  (mu4e-update-index . 3)
  (paredit-mode . 1)
  (package-refresh-contents . 1)
+ (magit . 17)
+ (magit-file-untrack . 1)
+ (all-the-icons-install-fonts . 1)
+ (all-the-icons-insert-alltheicon . 1)
+ (all-the-icons-insert . 1)
+ (dired . 1)
+ (grep-find . 1)
+ (find-grep . 1)
+ (grep . 2)
+ (semantic-symref-find-text . 1)
+ (find-grep-dired . 1)
 )

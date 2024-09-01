@@ -1,10 +1,10 @@
 ;; Emacs Email file
 ;;configuration heavily based on https://f-santos.gitlab.io/2020-04-24-mu4e.html (Thanks!)
+(provide 'mu4e-config)
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 (require 'mu4e)
-(require 'epa)
 (require 'smtpmail)
-(epa-file-enable)
+
 
 
 (defun get-gpg-password (file)

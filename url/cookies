@@ -1,0 +1,31 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".verywellmind.com"
+  [url-cookie "TMog" "n204074c2d8a147e78006e99c5e0b990d00" "Sun Sep 14 03:57:55 2092 GMT" "/" ".verywellmind.com" nil]
+  [url-cookie "globalTI_SID" "439dca2e-f705-4d52-a54e-ee1913768719" "Thu Aug 27 00:43:48 2026 GMT" "/" ".verywellmind.com" nil])
+ (".cnn.com"
+  [url-cookie "FastAB" "0=0928,1=0165,2=0068,3=4735,4=3818,5=5747,6=9387,7=6588,8=1606,9=5782,10=9175,11=3759,12=1111,13=1959,14=2819,15=4350,16=6336,17=9649,18=4061,19=5088" "Wed, 27 Aug 2025 01:44:45 GMT" "/" ".cnn.com" nil])
+ (".fandom.com"
+  [url-cookie "exp_bucket_2" "v2-89" "Sat, 16 Nov 2024 03:29:33 GMT" "/" ".fandom.com" nil]
+  [url-cookie "exp_bucket" "86" "Fri, 14 Feb 2025 03:29:33 GMT" "/" ".fandom.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".wikipedia.org"
+  [url-cookie "WMF-Last-Access-Global" "28-Aug-2024" "Sun, 29 Sep 2024 00:00:00 GMT" "/" ".wikipedia.org" t])
+ (".fandom.com"
+  [url-cookie "_b2" "teOA7X3TuH.1723951773621" "Tue, 18 Aug 2026 03:29:33 GMT" "/" ".fandom.com" t]
+  [url-cookie "wikia_beacon_id" "K0-GWL8cMA" "Fri, 14 Feb 2025 03:29:33 GMT" "/" ".fandom.com" t])
+ ("en.wikipedia.org"
+  [url-cookie "WMF-Last-Access" "28-Aug-2024" "Sun, 29 Sep 2024 00:00:00 GMT" "/" "en.wikipedia.org" t]
+  [url-cookie "NetworkProbeLimit" "0.001" "Wed Aug 28 01:18:52 2024 GMT" "/" "en.wikipedia.org" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; coding: utf-8-emacs-unix
+;; End:
+
+;;; cookies ends here
