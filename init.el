@@ -10,6 +10,7 @@
 
 ;;; Custom Keymaps
 (global-set-key (kbd "C-c i") 'insert-parentheses)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;;; Code:
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
@@ -48,7 +49,7 @@ package-archive-priorities
 (require 'use-package)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'preferences)
-(require 'mu4e-config)
+(require 'mu4e-cb-config)
 (require 'files)
 (require 'lint-lsp)
 (require 'qol)

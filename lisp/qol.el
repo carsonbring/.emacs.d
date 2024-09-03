@@ -18,7 +18,7 @@
 ;; Yasnippet abbreviations - pr for System.out.println()
 (use-package yasnippet :config (yas-global-mode))
 (use-package yasnippet-snippets :ensure t)
-vv
+
 
 ;; Make buffer names unique
 ;; buffernames that are foo<1>, foo<2> are hard to read. This makes them foo|dir  foo|otherdir
@@ -56,7 +56,14 @@ vv
 (setq org-startup-indented t)
 (setq org-hide-leading-stars t)
 
+;; org-roam
+(use-package org-roam
+  :ensure t)
+
+(setq org-roam-directory (file-truename "~/org-roam"))
+(org-roam-db-autosync-mode)
 ;;PDF VIEW
 (use-package pdf-tools
   :ensure t)
+
 

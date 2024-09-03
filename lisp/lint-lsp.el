@@ -1,6 +1,6 @@
 ;;;; This file is for linting and lsp (also debugging)
 (provide 'lint-lsp)
-n
+
 ;; Provides all the racket support
 (use-package racket-mode
   :ensure t)
@@ -136,6 +136,7 @@ n
 
 (use-package helm
   :config (helm-mode))
+(helm-mode t)
 
 ;;pyvenv setup
 (use-package pyvenv
