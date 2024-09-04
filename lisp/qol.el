@@ -5,15 +5,15 @@
   :ensure t)
 
 ;; ido for M-x
-(use-package smex
-             :ensure t
-             :config
-             (progn
-               (smex-initialize)
-               (global-set-key (kbd "M-x") 'smex)
-               (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-               ;; This is your old M-x.
-               (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)))
+;; (use-package smex
+;;              :ensure t
+;;              :config
+;;              (progn
+;;                (smex-initialize)
+;;                (global-set-key (kbd "M-x") 'smex)
+;;                (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;;                ;; This is your old M-x.
+;;                (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)))
 
 ;; Yasnippet abbreviations - pr for System.out.println()
 (use-package yasnippet :config (yas-global-mode))

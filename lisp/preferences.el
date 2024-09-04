@@ -38,5 +38,11 @@
 ;; custom startup screen into sicp due to me doing my practice
 (setq inhibit-startup-screen t)
 (setq initial-buffer-choice "~/projects")
+(defun open-helm-find-files-at-projects ()
+  "Open helm-find-files at ~/projects on startup."
+  (helm-find-files-1 "~/projects/"))
+
+(add-hook 'emacs-startup-hook 'open-helm-find-files-at-projects)
+
 
 

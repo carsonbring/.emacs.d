@@ -11,7 +11,7 @@
 ;;; Custom Keymaps
 (global-set-key (kbd "C-c i") 'insert-parentheses)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-
+(global-set-key (kbd "M-x") 'helm-M-x)
 ;;; Code:
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 ;; font size
