@@ -5,6 +5,15 @@
 (use-package racket-mode
   :ensure t)
 
+;; Provides rust-mode and toml
+(use-package toml-mode)
+
+(use-package rust-mode
+  :hook (rust-mode . lsp))
+
+(use-package cargo
+  :hook (rust-mode . cargo-minor-mode))
+
 ;; Quick run
 (use-package quickrun 
 :ensure t
@@ -33,6 +42,9 @@
              :ensure t
              :config
              (global-flycheck-mode))
+
+(use-package flycheck-rust
+  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 ;; Lots of parenthesis and other delimiter niceties
 (use-package paredit
@@ -65,6 +77,7 @@
    (lsp-mode . lsp-enable-which-key-integration)
    (java-mode . #'lsp-deferred)
    (typescript-mode . lsp)
+   (rust-mode . lsp)
 )
 :init (setq 
     lsp-keymap-prefix "C-c l"              ; this is for which-key integration documentation, need to use lsp-mode-map
@@ -91,6 +104,9 @@
   :config
   (setq lsp-keymap-prefix "C-c l")
   )
+
+										; Python mode setup when entering .py file
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
 ;Assign M-9 to show error list
 (use-package dap-mode

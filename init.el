@@ -13,6 +13,7 @@
 (global-set-key (kbd "C-c i") 'insert-parentheses)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-c C-f") 'org-roam-node-find)
 
 (setq EMACS_DIR "~/.emacs.d/")
 
@@ -20,16 +21,12 @@
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 ;; font size
 ;; value is in 1/10pt
-(set-face-attribute 'default nil :height 140)
-
-(load (expand-file-name "mu4e.el" user-emacs-directory))
+(set-face-attribute 'default nil :height 160)
 
 
 ;; Add the melpa emacs repo, where most packages are
 (require 'package)
 
-(require 'all-the-icons)
-(add-to-list 'image-types 'svg)
 ;; Setting package archives
 (setq package-archives
 '(("GNU ELPA" . "https://elpa.gnu.org/packages/")
@@ -60,6 +57,7 @@ package-archive-priorities
 (require 'files)
 (require 'lint-lsp)
 (require 'qol)
+(require 'mu4e-cbring)
 
 
 (custom-set-variables
@@ -70,7 +68,7 @@ package-archive-priorities
  '(custom-safe-themes
    '("74e2ed63173b47d6dc9a82a9a8a6a9048d89760df18bc7033c5f91ff4d083e37" default))
  '(package-selected-packages
-   '(treemacs-nerd-icons treemacs-all-the-icons magit-file-icons ob-raku flycheck-raku helm-lsp all-the-icons-completion all-the-icons-dired all-the-icons-gnus all-the-icons-ibuffer all-the-icons-ivy all-the-icons-ivy-rich all-the-icons-nerd-fonts almost-mono-themes raku-mode kaolin-themes posframe treesit-auto spinner lsp-mode rainbow-delimiters paredit company flycheck racket-mode smex magit geiser-racket geiser-mit)))
+   '(flycheck-rust toml-mode treemacs-nerd-icons treemacs-all-the-icons magit-file-icons ob-raku flycheck-raku helm-lsp all-the-icons-completion all-the-icons-dired all-the-icons-gnus all-the-icons-ibuffer all-the-icons-ivy all-the-icons-ivy-rich all-the-icons-nerd-fonts almost-mono-themes raku-mode kaolin-themes posframe treesit-auto spinner lsp-mode rainbow-delimiters paredit company flycheck racket-mode smex magit geiser-racket geiser-mit)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
