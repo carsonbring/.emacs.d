@@ -1,10 +1,12 @@
-;; Java setup file -08-30-2024
-(setenv "JAVA_HOME" "/usr/lib/jvm/jdk-22.0.2-oracle-x64")
+;;; Java configuration
+;;; Commentary: Java development setup with LSP and DAP support
+(provide 'java-config)
 
-;;; disable ring-bell when backspace key is pressed
-(setq ring-bell-function 'ignore)
+(setenv "JAVA_HOME" "/usr/lib/jvm/java-21-openjdk-amd64/bin/java")
 
-(setq whitespace-line-column 1000) 
+(use-package lsp-java 
+  :ensure t
+  :config (add-hook 'java-mode-hook 'lsp))
 
 (use-package dap-mode
   :ensure t

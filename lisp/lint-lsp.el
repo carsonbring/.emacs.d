@@ -1,23 +1,11 @@
-;;;; This file is for linting and lsp (also debugging)
+;;;; LSP, linting, and development tools configuration
+;;; Commentary: Core development tools - LSP, completion, syntax checking
 (provide 'lint-lsp)
 
-;; Provides all the racket support
-(use-package racket-mode
-  :ensure t)
-
-;; Provides rust-mode and toml
-(use-package toml-mode)
-
-(use-package rust-mode
-  :hook (rust-mode . lsp))
-
-(use-package cargo
-  :hook (rust-mode . cargo-minor-mode))
-
-;; Quick run
+;; Quick run for various languages
 (use-package quickrun 
-:ensure t
-:bind ("C-c r" . quickrun))
+  :ensure t
+  :bind ("C-c r" . quickrun))
 
 ;; Autocomplete popups
 (use-package company
@@ -43,8 +31,6 @@
              :config
              (global-flycheck-mode))
 
-(use-package flycheck-rust
-  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 ;; Lots of parenthesis and other delimiter niceties
 (use-package paredit
@@ -67,9 +53,6 @@
 ;; lsp-mode setup
 ;; Use C-c l to activate 
 
-(use-package lsp-java 
-:ensure t
-:config (add-hook 'java-mode-hook 'lsp))
 
 (use-package lsp-mode
 :ensure t
@@ -78,6 +61,10 @@
    (java-mode . #'lsp-deferred)
    (typescript-mode . lsp)
    (rust-mode . lsp)
+   (c++-mode . lsp)
+   (c-mode . lsp)
+   (c++-ts-mode . lsp)
+   (c-ts-mode . lsp)
 )
 :init (setq 
     lsp-keymap-prefix "C-c l"              ; this is for which-key integration documentation, need to use lsp-mode-map
@@ -85,44 +72,24 @@
     read-process-output-max (* 1024 1024)  ; 1 mb
     lsp-completion-provider :capf
     lsp-idle-delay 0.500
+    lsp-install-server-automatically t     ; Enable automatic server installation
 )
 :config 
     (setq lsp-intelephense-multi-root nil) ; don't scan unnecessary projects
     (with-eval-after-load 'lsp-intelephense
     (setf (lsp--client-multi-root (gethash 'iph lsp-clients)) nil))
 	(define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
+	;; Register tree-sitter modes with LSP
+	(add-to-list 'lsp-language-id-configuration '(c++-ts-mode . "cpp"))
+	(add-to-list 'lsp-language-id-configuration '(c-ts-mode . "c"))
+	;; Ensure Python modes use pyright
+	(add-to-list 'lsp-language-id-configuration '(python-mode . "python"))
+	(add-to-list 'lsp-language-id-configuration '(python-ts-mode . "python"))
 	)
 
 (use-package hydra)
 
-;; lsp-pyright setup
-(use-package lsp-pyright
-  :ensure t
-  :hook (python-mode . (lambda ()
-(require 'lsp-pyright)
-(lsp)))
-  :config
-  (setq lsp-keymap-prefix "C-c l")
-  )
 
-										; Python mode setup when entering .py file
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-
-;Assign M-9 to show error list
-(use-package dap-mode
-  :ensure t
-  :after (lsp-mode)
-  :functions dap-hydra/nil
-  :config
-  (require 'dap-java)
-  :bind (:map lsp-mode-map
-         ("<f5>" . dap-debug)
-         ("M-<f5>" . dap-hydra))
-  :hook ((dap-mode . dap-ui-mode)
-    (dap-session-created . (lambda (&_rest) (dap-hydra)))
-    (dap-terminated . (lambda (&_rest) (dap-hydra/nil)))))
-
-(use-package dap-java :ensure nil)
 
 ; C-c 1 T
 (use-package lsp-ui
@@ -154,14 +121,6 @@
   :config (helm-mode))
 (helm-mode t)
 
-;;pyvenv setup
-(use-package pyvenv
-  :ensure t
-  :config
-  ;; Set the default venv directory
-  (setq pyvenv-workon ".venv")
-  (pyvenv-mode 1))
-
 ;;Apheleia setup (prettier)
 (use-package apheleia
   :ensure t)
@@ -175,44 +134,3 @@
 ;; Usage: M-x add-node-modules-path
 (use-package add-node-modules-path
   :ensure t)
-
-;;Treesitter
-(use-package tree-sitter
-  :ensure t)
-(use-package tree-sitter-langs
-  :ensure t)
-
-;;Treesit-auto for ts grammar
-(use-package treesit-auto
-  :custom
-  (treesit-auto-install 'prompt)
-  :config
-  (treesit-auto-add-to-auto-mode-alist 'all)
-  (global-treesit-auto-mode))
-
-(setq treesit-auto-install 'prompt)
-
-;;tide setup
-(use-package tide
-  :ensure t)
-
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  ;; company is an optional dependency. You have to
-  ;; install it separately via package-install
-  ;; `M-x package-install [ret] company`
-  (company-mode +1))
-
-;; TIDE CONFIG
-;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
-;; formats the buffer before saving
-(add-hook 'before-save-hook 'tide-format-before-save)
-;; if you use treesitter based typescript-ts-mode (emacs 29+)
-(add-hook 'typescript-ts-mode-hook #'setup-tide-mode)
-(add-hook 'tsx-ts-mode-hook #'setup-tide-mode)

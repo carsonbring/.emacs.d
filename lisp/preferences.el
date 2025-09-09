@@ -1,5 +1,5 @@
-;;; package --- Generic Preference
-;;; Commentary: This is just for uncategorizable preferences for my based and redpilled emacs config
+;;; Basic Emacs preferences and UI settings
+;;; Commentary: Core Emacs behavior, appearance, and editor settings
 (provide 'preferences)
 
 ;Move backup files to seperate directory
@@ -30,10 +30,13 @@
 (setq line-move-visual t)
 
 ;Setting font
-(set-face-attribute 'default nil :font "0xProto Nerd Font Mono-17" )
-
+(set-face-attribute 'default nil :font "0xProto Nerd Font Mono-15" )
 ;Killing toolbar
 (tool-bar-mode -1)
+
+;; Fast key repeat - no delay, fast repeat
+(setq echo-keystrokes 0.01)
+(setq-default bidi-display-reordering nil)
 
 ;; custom startup screen into sicp due to me doing my practice
 (setq inhibit-startup-screen t)

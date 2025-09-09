@@ -1,3 +1,5 @@
+;;; File management and navigation
+;;; Commentary: Projectile, file finding, and buffer management
 (provide 'files)
 
 ;; Projectile - EZ navigation within project. ADD .projectile FILE AND USE C-c p

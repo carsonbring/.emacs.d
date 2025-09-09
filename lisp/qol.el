@@ -1,3 +1,5 @@
+;;; Quality of life improvements
+;;; Commentary: UI themes, productivity tools, and general enhancements
 (provide 'qol)
 
 ;; Provides multiple cursors
@@ -31,11 +33,10 @@
   :ensure t)
 
 ;;Cool beast theme aka TURQUOISE NINJA NIGHT WATER
-(use-package kaolin-themes
+(use-package catppuccin-theme
   :config
-   (load-theme 'kaolin-dark t))
-
-
+  (setq catppuccin-flavor 'macchiato)
+  (load-theme 'catppuccin :no-confirm))
 
 ;; Disables ansi color in compilation mode
 (defun my/ansi-colorize-buffer ()
@@ -66,3 +67,12 @@
 ;;PDF VIEW
 (use-package pdf-tools
   :ensure t)
+
+;; Terminal emulator - multi-vterm for multiple terminals
+(use-package multi-vterm
+  :ensure t
+  :config
+  (setq vterm-max-scrollback 10000)
+  (setq multi-vterm-buffer-name "vterm")
+  :bind (("C-c t" . multi-vterm)
+         ("C-c T" . multi-vterm-dedicated-toggle)))
