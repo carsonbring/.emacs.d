@@ -44,7 +44,7 @@
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 ;; font size
 ;; value is in 1/10pt
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 240)
 
 
 ;; Add the melpa emacs repo, where most packages are

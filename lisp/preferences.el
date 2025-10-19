@@ -30,7 +30,7 @@
 (setq line-move-visual t)
 
 ;Setting font
-(set-face-attribute 'default nil :font "0xProto Nerd Font Mono-15" )
+(set-face-attribute 'default nil :font "0xProto Nerd Font Mono-20" )
 ;Killing toolbar
 (tool-bar-mode -1)
 
