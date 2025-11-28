@@ -33,10 +33,9 @@
   :ensure t)
 
 ;;Cool beast theme aka TURQUOISE NINJA NIGHT WATER
-(use-package catppuccin-theme
+(use-package gruvbox-theme
   :config
-  (setq catppuccin-flavor 'macchiato)
-  (load-theme 'catppuccin :no-confirm))
+  (load-theme 'gruvbox-dark-medium :no-confirm))
 
 ;; Disables ansi color in compilation mode
 (defun my/ansi-colorize-buffer ()

@@ -33,6 +33,13 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c C-f") 'org-roam-node-find)
 
+;; Getting npm from the official path
+(use-package exec-path-from-shell
+  :config
+  ;; Also import NVM_DIR and other shell vars
+  (setq exec-path-from-shell-variables '("PATH" "NVM_DIR" "NODE_PATH"))
+  (exec-path-from-shell-initialize))
+
 ;; expand-region configuration
 (use-package expand-region
   :ensure t
@@ -44,7 +51,7 @@
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 ;; font size
 ;; value is in 1/10pt
-(set-face-attribute 'default nil :height 240)
+(set-face-attribute 'default nil :height 120)
 
 
 ;; Add the melpa emacs repo, where most packages are
@@ -91,9 +98,21 @@ package-archive-priorities
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("74e2ed63173b47d6dc9a82a9a8a6a9048d89760df18bc7033c5f91ff4d083e37" default))
+   '("5a0ddbd75929d24f5ef34944d78789c6c3421aa943c15218bac791c199fc897d"
+	 "74e2ed63173b47d6dc9a82a9a8a6a9048d89760df18bc7033c5f91ff4d083e37"
+	 default))
  '(package-selected-packages
-   '(expand-region multi-vterm catppuccin-theme vterm lsp-javacomp helm-z flycheck-rust toml-mode treemacs-nerd-icons treemacs-all-the-icons magit-file-icons ob-raku flycheck-raku helm-lsp all-the-icons-completion all-the-icons-dired all-the-icons-gnus all-the-icons-ibuffer all-the-icons-ivy all-the-icons-ivy-rich all-the-icons-nerd-fonts almost-mono-themes raku-mode kaolin-themes posframe treesit-auto spinner lsp-mode rainbow-delimiters paredit company flycheck racket-mode smex magit geiser-racket geiser-mit)))
+   '(add-node-modules-path all-the-icons apheleia company elpy envrc
+						   exec-path-from-shell expand-region
+						   gruvbox-theme helm-lsp kaolin-themes
+						   lsp-java lsp-pyright lsp-ui magit
+						   markdown-preview-eww markdown-preview-mode
+						   markdownfmt multi-vterm multiple-cursors
+						   org-roam paredit pdf-tools projectile
+						   pyvenv quickrun racket-mode
+						   rainbow-delimiters smex tide
+						   tree-sitter-langs treesit-auto use-package
+						   which-key yasnippet-snippets)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

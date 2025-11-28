@@ -6,17 +6,6 @@
 (use-package racket-mode
   :ensure t)
 
-;; Rust configuration
-(use-package toml-mode)
-
-(use-package rust-mode
-  :hook (rust-mode . lsp))
-
-(use-package cargo
-  :hook (rust-mode . cargo-minor-mode))
-
-(use-package flycheck-rust
-  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (use-package lsp-pyright
   :ensure t
@@ -39,23 +28,8 @@
   (setq pyvenv-workon ".venv")
   (pyvenv-mode 1))
 
-;; TypeScript/JavaScript configuration
-(use-package tide
-  :ensure t)
-
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (company-mode +1))
 
 (setq company-tooltip-align-annotations t)
-(add-hook 'before-save-hook 'tide-format-before-save)
-(add-hook 'typescript-ts-mode-hook #'setup-tide-mode)
-(add-hook 'tsx-ts-mode-hook #'setup-tide-mode)
 
 ;; Tree-sitter for modern syntax highlighting
 (use-package tree-sitter
